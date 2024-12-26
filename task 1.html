@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation menu styles */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e90ff; 
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav.scrolled {
+            background-color: #ff6347; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav a {
+            color: #fff; 
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #32cd32; 
+            color: #fff; 
+        }
+
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            height: 2000px; 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="content">
+        <h1>Welcome to the Interactive Navigation Demo</h1>
+        <p>Scroll down to see the navigation bar change style or hover on one of the menu item to see the hover effect.</p>
+    </div>
+
+    <script>
+        const nav = document.getElementById('nav');
+
+        // Scroll event listener to change nav style when scrolling
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
