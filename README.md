@@ -16,6 +16,6 @@ Menu items change color when hovered over, making the interface interactive and 
 Works seamlessly on all screen sizes, from mobile devices to desktops.
 
 ### Technologies Used
-HTML: Provides the structural foundation of the page, including the navigation menu and content layout.
-CSS: Styles the navigation menu with vibrant colors, hover effects, and smooth transitions for a professional look.
+HTML: Provides the structural foundation of the page, including the navigation menu and content layout. <br>
+CSS: Styles the navigation menu with vibrant colors, hover effects, and smooth transitions for a professional look.<br>
 JavaScript: Adds interactivity by dynamically detecting the scroll position and toggling classes to modify the menu’s appearance.
